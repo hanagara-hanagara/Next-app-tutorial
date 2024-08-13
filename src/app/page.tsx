@@ -12,7 +12,7 @@ const Index = () => {
                     alt="hero"
                 />
                 <div className="textContainer">
-                    <h1>I'm Abe Hiroki!</h1>
+                    <h1>I&apos;m Abe Hiroki!</h1>
                     <h3>JavaScript Developer</h3>
                 </div>
             </div>
