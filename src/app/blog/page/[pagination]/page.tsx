@@ -2,6 +2,11 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { getAllBlogs, blogsPerPage } from '../../../utils/mdQueries';
 
+export const metadata = {
+    title: 'ブログ',
+    description: 'これはブログページです。',
+};
+
 type Props = {
     params: {
         pagination: string;
@@ -48,12 +53,10 @@ export default async function Blog(props: Props) {
     );
 }
 
-type Paths = string[];
-
 export async function generateStaticParams() {
     const { numberPages } = await getAllBlogs();
 
-    let paths: Paths = [];
+    let paths: string[] = [];
     Array.from({ length: numberPages }).map((_, index) => paths.push(`/blog/page/%{index + 2}`));
 
     return paths;

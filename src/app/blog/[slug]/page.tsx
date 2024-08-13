@@ -8,6 +8,14 @@ type Props = {
     searchParams: {};
 };
 
+export async function generateMetadata(props: Props) {
+    const { singleDocument } = await getSingleBlog(props);
+    return {
+        title: singleDocument.data.title,
+        description: singleDocument.data.excerpt,
+    };
+}
+
 export default async function SingleBlog(props: Props) {
     const { singleDocument } = await getSingleBlog(props);
 

@@ -1,3 +1,8 @@
+export const metadata = {
+    title: 'コンタクト',
+    description: 'コンタクトページです。',
+};
+
 export default function Contact() {
     return (
         <>

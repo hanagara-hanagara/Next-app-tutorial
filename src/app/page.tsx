@@ -3,6 +3,11 @@ import Image from 'next/image';
 import profilePic from '../../public/images/profile.jpg';
 import heroPic from '../../public/images/index-hero.jpg';
 
+export const metadata = {
+    title: 'Abe Hiroki',
+    description: 'Abe Hiroki のポートフォリオサイトです。',
+};
+
 const Index = () => {
     return (
         <>
